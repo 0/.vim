@@ -1,0 +1,6 @@
+# Managed by Vundle.
+/bundle/
+
+# Machine-specific.
+/undodir/
+/view/
