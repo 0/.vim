@@ -127,4 +127,11 @@ let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
 " }}}
 
+" YankRing {{{
+nmap <leader>y :YRShow<cr>
+
+let g:yankring_replace_n_pkey = '<leader>['
+let g:yankring_replace_n_nkey = '<leader>]'
+" }}}
+
 " }}}
