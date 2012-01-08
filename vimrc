@@ -90,6 +90,18 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_pdf = 'evince $*.pdf'
 " }}}
 
+" The-NERD-tree {{{
+nmap <silent> <c-n> :NERDTreeToggle<CR>
+
+let NERDTreeCaseSensitiveSort = 1
+let NERDTreeChDirMode = 2
+let NERDTreeIgnore  = ['\.o$', '\~$']
+let NERDTreeIgnore += ['\.aux$', '\.bbl$', '\.blg$']
+let NERDTreeIgnore += ['\.pyc$', '\.pyo$']
+let NERDTreeIgnore += ['\.class$']
+let NERDTreeQuitOnOpen = 1
+" }}}
+
 " neverland-vim-theme {{{
 colorscheme neverland-darker
 " }}}
@@ -113,18 +125,6 @@ let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Inc_Winwidth = 0
 let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
-" }}}
-
-" The-NERD-tree {{{
-nmap <silent> <c-n> :NERDTreeToggle<CR>
-
-let NERDTreeCaseSensitiveSort = 1
-let NERDTreeChDirMode = 2
-let NERDTreeIgnore  = ['\.o$', '\~$']
-let NERDTreeIgnore += ['\.aux$', '\.bbl$', '\.blg$']
-let NERDTreeIgnore += ['\.pyc$', '\.pyo$']
-let NERDTreeIgnore += ['\.class$']
-let NERDTreeQuitOnOpen = 1
 " }}}
 
 " }}}
