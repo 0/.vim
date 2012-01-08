@@ -1,5 +1,9 @@
-" Options {{{
 set nocompatible
+
+" Load all plugins with Vundle
+source ~/.vim/bundles.vim
+
+" General options {{{
 set exrc                          " Also search for vimrc in pwd
 set shortmess=aI                  " Shorten all messages; don't show intro
 set wildmode=longest,list         " Better file tab completion
@@ -69,25 +73,13 @@ autocmd! BufEnter * silent! lcd %:p:h:gs/ /\\ /
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 " }}}
 
-" Plugins {{{
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" Plugin settings {{{
 
-Bundle 'a.vim'
-
-Bundle 'Arduino-syntax-file'
-
-Bundle 'Command-T'
-
-Bundle 'fugitive.vim'
-
-Bundle 'Gundo'
-" {{{
+" Gundo {{{
 nnoremap <leader>u :silent GundoToggle<CR>
 " }}}
 
-Bundle 'jnwhiteh/LaTeX-Suite-aka-Vim-LaTeX'
-" {{{
+" LaTeX-Suite-aka-Vim-LaTeX {{{
 set grepprg=grep\ -nH\ $*
 
 let g:tex_flavor = "xetex"
@@ -98,27 +90,18 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_pdf = 'evince $*.pdf'
 " }}}
 
-Bundle 'matchit.zip'
-
-Bundle '0/neverland-vim-theme'
-" {{{
+" neverland-vim-theme {{{
 colorscheme neverland-darker
 " }}}
 
-Bundle 'notes.vim'
-" {{{
+" notes.vim {{{
 let g:notes_directory = '~/notes.d/user'
 let g:notes_shadowdir = '~/notes.d/shadow'
 let g:notes_indexfile = '~/notes.d/index.sqlite3'
 let g:notes_tagsindex = '~/notes.d/tags.txt'
 " }}}
 
-Bundle "wlangstroth/vim-racket"
-
-Bundle 'speeddating.vim'
-
-Bundle 'taglist.vim'
-" {{{
+" taglist.vim {{{
 nmap <silent> <c-l> :TlistToggle<CR>
 
 let Tlist_Use_Horiz_Window=0
@@ -132,8 +115,7 @@ let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
 " }}}
 
-Bundle 'The-NERD-tree'
-" {{{
+" The-NERD-tree {{{
 nmap <silent> <c-n> :NERDTreeToggle<CR>
 
 let NERDTreeCaseSensitiveSort = 1
@@ -145,9 +127,4 @@ let NERDTreeIgnore += ['\.class$']
 let NERDTreeQuitOnOpen = 1
 " }}}
 
-Bundle 'The-NERD-Commenter'
-
-Bundle '0/vim-slime'
-
-Bundle 'gmarik/vundle'
 " }}}
