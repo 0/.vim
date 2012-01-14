@@ -22,13 +22,21 @@ set visualbell t_vb=              " Disable vbell
 set background=dark               " Light-on-dark
 set guifont=Fixed\ 11
 set number                        " Show line numbers
-set colorcolumn=80                " Hilight the 80th column
+if exists('+colorcolumn')
+	set colorcolumn=80            " Hilight the 80th column
+endif
 set foldmethod=marker             " Fold on markers
 set foldcolumn=1                  " Show folds
 set list                          " Show whitespace
 set listchars=tab:»·,trail:·,nbsp:%
 set display=uhex                  " Show nonprintables as <xx>
 set pastetoggle=<F2>              " Toggle :set paste/nopaste
+if has("persistent_undo")
+	set undodir=~/.vim/undodir
+	set undofile
+	set undolevels=1000
+	set undoreload=10000
+endif
 
 set statusline =%n\               " Buffer number
 set statusline+=%f\               " Path
@@ -54,11 +62,6 @@ filetype plugin indent on         " Filetype-specific options
 setlocal spell spelllang=en_ca
 set nospell
 nmap <silent> <leader>sp :set spell!<CR>
-
-set undodir=~/.vim/undodir
-set undofile
-set undolevels=1000
-set undoreload=10000
 
 " Spaces are good for indentation sometimes
 autocmd! FileType lisp,racket setlocal expandtab
