@@ -9,3 +9,8 @@ Installation
 #. ``git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle``
 #. ``vim -u ~/.vim/bundles.vim +BundleInstall +qa``
 #. ``ln -s ~/.vim/vimrc ~/.vimrc``
+
+Command-T
+---------
+
+``:help command-t-installation``
