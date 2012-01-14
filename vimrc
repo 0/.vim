@@ -20,7 +20,11 @@ set showcmd                       " Show selection size
 set hidden                        " Allow hidden buffers
 set visualbell t_vb=              " Disable vbell
 set background=dark               " Light-on-dark
-set guifont=Fixed\ 11
+if has("gui_macvim")
+	set guifont=Menlo\ Regular:h12
+else
+	set guifont=Fixed\ 11
+endif
 set number                        " Show line numbers
 if exists('+colorcolumn')
 	set colorcolumn=80            " Hilight the 80th column
