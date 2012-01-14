@@ -69,9 +69,6 @@ autocmd! FileType lisp,racket setlocal expandtab
 " Clear highlighting
 nmap <silent> <c-h> :nohl<CR>:redraw<CR>
 
-" Always cd to the current file's directory
-autocmd! BufEnter * silent! lcd %:p:h:gs/ /\\ /
-
 " Go back to the last position when opening a file
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 " }}}
