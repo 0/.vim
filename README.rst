@@ -14,3 +14,8 @@ Command-T
 ---------
 
 ``:help command-t-installation``
+
+threesome.vim
+-------------
+
+``:help ThreesomeVCS``
