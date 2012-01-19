@@ -81,7 +81,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Plugin settings {{{
 
 " Command-T {{{
-nnoremap <silent> <Leader>y :CommandT<CR>
+nnoremap <silent> <leader>j :CommandT<CR>
 
 let g:CommandTMaxHeight = 15
 let g:CommandTMatchWindowReverse = 1
