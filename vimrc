@@ -22,9 +22,11 @@ set visualbell t_vb=              " Disable vbell
 set background=dark               " Light-on-dark
 if has("gui_macvim")
 	set guifont=Menlo\ Regular:h12
-	set showtabline=2             " Always show the tab bar
 else
 	set guifont=Fixed\ 11
+endif
+if has("gui_running")
+	set showtabline=2             " Always show the tab bar
 endif
 set number                        " Show line numbers
 if exists('+colorcolumn')
