@@ -121,10 +121,12 @@ colorscheme neverland-darker
 " }}}
 
 " notes.vim {{{
-let g:notes_directory = '~/notes.d/user'
-let g:notes_shadowdir = '~/notes.d/shadow'
-let g:notes_indexfile = '~/notes.d/index.sqlite3'
-let g:notes_tagsindex = '~/notes.d/tags.txt'
+let g:notes_shadowdir = '~/.vim/notes-shadow'
+
+let notes_dir = '~/notes.d/'
+let g:notes_directory = notes_dir . 'user'
+let g:notes_indexfile = notes_dir . 'index'
+let g:notes_tagsindex = notes_dir . 'tags'
 " }}}
 
 " taglist.vim {{{
