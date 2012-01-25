@@ -15,7 +15,17 @@ Command-T
 
 ``:help command-t-installation``
 
+notes.vim
+---------
+
+``mkdir -p ~/notes.d/user``
+
 threesome.vim
 -------------
 
 ``:help ThreesomeVCS``
+
+taglist.vim
+-----------
+
+Install `Exuberant Ctags <http://ctags.sourceforge.net/>`_.
