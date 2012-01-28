@@ -45,19 +45,6 @@ if has("persistent_undo")
 	set undoreload=10000
 endif
 
-set statusline =%n\               " Buffer number
-set statusline+=%f\               " Path
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " Encoding
-set statusline+=%{&ff}]           " Line endings
-set statusline+=%y                " Filetype
-set statusline+=%m                " Modified?
-set statusline+=%r                " Readonly?
-set statusline+=%w                " Preview?
-set statusline+=%{fugitive#statusline()} " Git branch
-set statusline+=%=                " Separator
-set statusline+=%c%V,%l/%L\       " Position, at least 14 chars wide
-set statusline+=%P                " Percent through file
-
 noremap  <F1> <ESC>
 inoremap <F1> <ESC>
 
@@ -127,6 +114,13 @@ let notes_dir = '~/notes.d/'
 let g:notes_directory = notes_dir . 'user'
 let g:notes_indexfile = notes_dir . 'index'
 let g:notes_tagsindex = notes_dir . 'tags'
+" }}}
+
+" statline {{{
+let g:statline_fugitive = 1
+let g:statline_show_n_buffers = 0
+let g:statline_filename_relative = 1
+let g:statline_show_charcode = 1
 " }}}
 
 " taglist.vim {{{
