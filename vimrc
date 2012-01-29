@@ -4,7 +4,6 @@ set nocompatible
 source ~/.vim/bundles.vim
 
 " General options {{{
-set exrc                          " Also search for vimrc in pwd
 set shortmess=aI                  " Shorten all messages; don't show intro
 set wildmode=longest,list         " Better file tab completion
 set tabstop=4                     " A 4-space tab seems reasonable
