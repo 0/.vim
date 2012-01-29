@@ -16,7 +16,7 @@ set smartcase                     " But not always
 set virtualedit=block             " Allow block selection to go anywhere
 set scrolloff=5                   " Keep 5 lines when scrolling
 set laststatus=2                  " Always show a statusline
-set showcmd                       " Show selection size
+set showcmd                       " Show command typed, selection size
 set hidden                        " Allow hidden buffers
 set visualbell t_vb=              " Disable vbell
 set background=dark               " Light-on-dark
@@ -44,31 +44,34 @@ if has("persistent_undo")
 	set undolevels=1000
 	set undoreload=10000
 endif
-
-noremap  <F1> <ESC>
-inoremap <F1> <ESC>
-
-let mapleader = ","
+set spelllang=en_ca               " Canadian English
 
 syntax enable                     " Syntax higlighting
 filetype plugin indent on         " Filetype-specific options
 
-setlocal spell spelllang=en_ca
-set nospell
-nmap <silent> <leader>sp :set spell!<CR>
+" Key mappings {{{
+let mapleader = ","
 
-" Spaces are good for indentation sometimes
-autocmd! FileType lisp,racket setlocal expandtab
+noremap  <F1> <ESC>
+inoremap <F1> <ESC>
+
+" Toggle spell checking.
+nnoremap <silent> <leader>sp :set spell!<CR>
 
 " Clear highlighting
-nmap <silent> <c-h> :nohl<CR>:redraw<CR>
+nnoremap <silent> <c-h> :nohl<CR>:redraw<CR>
+" }}}
+
+" Autocommands {{{
+" Spaces are good for indentation sometimes
+autocmd FileType lisp,racket setlocal expandtab
 
 " Go back to the last position when opening a file
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+" }}}
 " }}}
 
 " Plugin settings {{{
-
 " Command-T {{{
 nnoremap <silent> <leader>j :CommandT<CR>
 
@@ -92,7 +95,7 @@ let g:Tex_ViewRule_pdf = 'evince $*.pdf'
 " }}}
 
 " The-NERD-tree {{{
-nmap <silent> <c-n> :NERDTreeToggle<CR>
+nnoremap <silent> <c-n> :NERDTreeToggle<CR>
 
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeChDirMode = 2
@@ -124,7 +127,7 @@ let g:statline_show_charcode = 1
 " }}}
 
 " taglist.vim {{{
-nmap <silent> <c-l> :TlistToggle<CR>
+nnoremap <silent> <c-l> :TlistToggle<CR>
 
 let Tlist_Use_Horiz_Window=0
 let Tlist_Use_Right_Window = 1
@@ -138,10 +141,9 @@ let Tlist_Process_File_Always = 1
 " }}}
 
 " YankRing {{{
-nmap <leader>y :YRShow<cr>
+nnoremap <leader>y :YRShow<cr>
 
 let g:yankring_replace_n_pkey = '<leader>['
 let g:yankring_replace_n_nkey = '<leader>]'
 " }}}
-
 " }}}
