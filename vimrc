@@ -4,6 +4,7 @@ set nocompatible
 source ~/.vim/bundles.vim
 
 " General options {{{
+set modelines=0                   " Don't look at modelines
 set shortmess=aI                  " Shorten all messages; don't show intro
 set wildmode=longest,list         " Better file tab completion
 set tabstop=4                     " A 4-space tab seems reasonable
@@ -12,13 +13,16 @@ set hlsearch                      " Highlight search results
 set incsearch                     " Search as you type
 set ignorecase                    " Ignore case when searching
 set smartcase                     " But not always
+set cursorline                    " Highlight the current line
 set virtualedit=block             " Allow block selection to go anywhere
 set scrolloff=5                   " Keep 5 lines when scrolling
 set laststatus=2                  " Always show a statusline
 set showcmd                       " Show command typed, selection size
+set lazyredraw                    " Redraw less frequently
 set hidden                        " Allow hidden buffers
 set visualbell t_vb=              " Disable vbell
 set background=dark               " Light-on-dark
+set title                         " Set the terminal title
 if has("gui_macvim")
 	set guifont=Menlo\ Regular:h12
 else
@@ -38,7 +42,7 @@ set listchars=tab:»·,trail:·,nbsp:%
 set display=uhex                  " Show nonprintables as <xx>
 set pastetoggle=<F2>              " Toggle :set paste/nopaste
 if has("persistent_undo")
-	set undodir=~/.vim/undodir
+	set undodir=~/.vim/undodir//
 	set undofile
 	set undolevels=1000
 	set undoreload=10000
@@ -47,6 +51,9 @@ set spelllang=en_ca               " Canadian English
 
 syntax enable                     " Syntax higlighting
 filetype plugin indent on         " Filetype-specific options
+
+" Highlight VCS conflict markers
+match ErrorMsg '^[<=>]\{7\}\([^=].\+\)\?$'
 
 " Key mappings {{{
 let mapleader = ","
@@ -59,6 +66,13 @@ nnoremap <silent> <leader>sp :set spell!<CR>
 
 " Clear highlighting
 nnoremap <silent> <c-h> :nohl<CR>:redraw<CR>
+
+" Heresy
+inoremap <c-a> <ESC>I
+inoremap <c-e> <ESC>A
+
+" Write the file with sudo
+cnoremap w!! w !sudo tee % >/dev/null
 " }}}
 
 " Autocommands {{{
