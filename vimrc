@@ -30,6 +30,7 @@ else
 endif
 if has("gui_running")
 	set showtabline=2             " Always show the tab bar
+	set guioptions-=T             " Don't show the toolbar
 endif
 set number                        " Show line numbers
 if exists('+colorcolumn')
@@ -48,6 +49,7 @@ if has("persistent_undo")
 	set undoreload=10000
 endif
 set spelllang=en_ca               " Canadian English
+set tags+=tags;                   " Search parents for tags
 
 syntax enable                     " Syntax higlighting
 filetype plugin indent on         " Filetype-specific options
