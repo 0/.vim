@@ -31,6 +31,8 @@ endif
 if has("gui_running")
 	set showtabline=2             " Always show the tab bar
 	set guioptions-=T             " Don't show the toolbar
+elseif has("mouse")
+	set mouse=a                   " Enable mouse use in terminal
 endif
 set number                        " Show line numbers
 if exists('+colorcolumn')
