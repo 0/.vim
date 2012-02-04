@@ -1,0 +1,100 @@
+[submodule "bundle/a"]
+	path = bundle/a
+	url = git://github.com/vim-scripts/a.vim.git
+	ignore = untracked
+[submodule "bundle/Align"]
+	path = bundle/Align
+	url = git://github.com/vim-scripts/Align.git
+	ignore = untracked
+[submodule "bundle/Arduino-syntax-file"]
+	path = bundle/Arduino-syntax-file
+	url = git://github.com/vim-scripts/Arduino-syntax-file.git
+	ignore = untracked
+[submodule "bundle/Command-T"]
+	path = bundle/Command-T
+	url = git://github.com/vim-scripts/Command-T.git
+	ignore = untracked
+[submodule "bundle/extradite"]
+	path = bundle/extradite
+	url = git://github.com/int3/vim-extradite.git
+	ignore = untracked
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = git://github.com/vim-scripts/fugitive.vim.git
+	ignore = untracked
+[submodule "bundle/gitv"]
+	path = bundle/gitv
+	url = git://github.com/gregsexton/gitv.git
+	ignore = untracked
+[submodule "bundle/Gundo"]
+	path = bundle/Gundo
+	url = git://github.com/vim-scripts/Gundo.git
+	ignore = untracked
+[submodule "bundle/LaTeX-Suite"]
+	path = bundle/LaTeX-Suite
+	url = git://github.com/jnwhiteh/LaTeX-Suite-aka-Vim-LaTeX
+	ignore = untracked
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = git://github.com/vim-scripts/matchit.zip.git
+	ignore = untracked
+[submodule "bundle/NERD-Commenter"]
+	path = bundle/NERD-Commenter
+	url = git://github.com/vim-scripts/The-NERD-Commenter.git
+	ignore = untracked
+[submodule "bundle/NERD-tree"]
+	path = bundle/NERD-tree
+	url = git://github.com/vim-scripts/The-NERD-tree.git
+	ignore = untracked
+[submodule "bundle/neverland"]
+	path = bundle/neverland
+	url = git://github.com/0/neverland-vim-theme
+	ignore = untracked
+[submodule "bundle/notes"]
+	path = bundle/notes
+	url = git://github.com/vim-scripts/notes.vim.git
+	ignore = untracked
+[submodule "bundle/NrrwRgn"]
+	path = bundle/NrrwRgn
+	url = git://github.com/chrisbra/NrrwRgn.git
+	ignore = untracked
+[submodule "bundle/pathogen"]
+	path = bundle/pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+	ignore = untracked
+[submodule "bundle/racket"]
+	path = bundle/racket
+	url = git://github.com/wlangstroth/vim-racket.git
+	ignore = untracked
+[submodule "bundle/repeat"]
+	path = bundle/repeat
+	url = git://github.com/tpope/vim-repeat.git
+	ignore = untracked
+[submodule "bundle/slime"]
+	path = bundle/slime
+	url = git://github.com/0/vim-slime.git
+	ignore = untracked
+[submodule "bundle/speeddating"]
+	path = bundle/speeddating
+	url = git://github.com/vim-scripts/speeddating.vim.git
+	ignore = untracked
+[submodule "bundle/statline"]
+	path = bundle/statline
+	url = git://github.com/millermedeiros/vim-statline.git
+	ignore = untracked
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git://github.com/tpope/vim-surround.git
+	ignore = untracked
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
+	ignore = untracked
+[submodule "bundle/threesome"]
+	path = bundle/threesome
+	url = git://github.com/sjl/threesome.vim.git
+	ignore = untracked
+[submodule "bundle/YankRing"]
+	path = bundle/YankRing
+	url = git://github.com/vim-scripts/YankRing.vim.git
+	ignore = untracked

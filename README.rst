@@ -2,13 +2,14 @@
 .vim
 ****
 
+Plugins are included as submodules and managed using `pathogen <https://github.com/tpope/vim-pathogen>`_.
+
 Installation
 ============
 
-#. ``git clone git://github.com/0/.vim.git ~/.vim``
-#. ``git clone git://github.com/gmarik/vundle.git ~/.vim/bundle/vundle``
-#. ``vim -u ~/.vim/bundles.vim +BundleInstall +qa``
+#. ``git clone --recursive git://github.com/0/.vim.git ~/.vim``
 #. ``ln -s ~/.vim/vimrc ~/.vimrc``
+#. ``vim +:Helptags +qa``
 
 Command-T
 ---------

@@ -1,7 +1,7 @@
 set nocompatible
 
-" Load all plugins with Vundle
-source ~/.vim/bundles.vim
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 " General options {{{
 set modelines=0                   " Don't look at modelines
@@ -100,7 +100,7 @@ let g:CommandTMatchWindowReverse = 1
 nnoremap <leader>u :silent GundoToggle<CR>
 " }}}
 
-" LaTeX-Suite-aka-Vim-LaTeX {{{
+" LaTeX-Suite {{{
 set grepprg=grep\ -nH\ $*
 
 let g:tex_flavor = "xetex"
@@ -111,7 +111,7 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_pdf = 'evince $*.pdf'
 " }}}
 
-" The-NERD-tree {{{
+" NERD-tree {{{
 nnoremap <silent> <c-n> :NERDTreeToggle<CR>
 
 let NERDTreeCaseSensitiveSort = 1
@@ -123,11 +123,11 @@ let NERDTreeIgnore += ['\.class$']
 let NERDTreeQuitOnOpen = 1
 " }}}
 
-" neverland-vim-theme {{{
+" neverland {{{
 colorscheme neverland-darker
 " }}}
 
-" notes.vim {{{
+" notes {{{
 let g:notes_shadowdir = '~/.vim/notes-shadow'
 
 let notes_dir = '~/notes.d/'
@@ -147,7 +147,7 @@ let g:statline_filename_relative = 1
 let g:statline_show_charcode = 1
 " }}}
 
-" taglist.vim {{{
+" taglist {{{
 nnoremap <silent> <c-l> :TlistToggle<CR>
 
 let Tlist_Use_Horiz_Window=0
