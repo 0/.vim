@@ -136,6 +136,10 @@ let g:notes_indexfile = notes_dir . 'index'
 let g:notes_tagsindex = notes_dir . 'tags'
 " }}}
 
+" NrrwRgn {{{
+let g:nrrw_rgn_protect = 'n'
+" }}}
+
 " statline {{{
 let g:statline_fugitive = 1
 let g:statline_show_n_buffers = 0
