@@ -18,6 +18,10 @@
 	path = bundle/extradite
 	url = git://github.com/int3/vim-extradite.git
 	ignore = untracked
+[submodule "bundle/file-line"]
+	path = bundle/file-line
+	url = git://github.com/bogado/file-line.git
+	ignore = untracked
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/vim-scripts/fugitive.vim.git
