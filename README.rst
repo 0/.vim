@@ -30,3 +30,10 @@ taglist.vim
 -----------
 
 Install `Exuberant Ctags <http://ctags.sourceforge.net/>`_.
+
+Updating
+========
+
+#. ``git pull``
+#. ``git submodule update --init``
+#. ``vim +:Helptags +qa``
