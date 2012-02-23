@@ -77,6 +77,21 @@ inoremap <c-e> <ESC>A
 
 " Write the file with sudo
 cnoremap w!! w !sudo tee % >/dev/null
+
+" I want to leave, especially if I'm holding shift.
+command! -bang Q    q
+command! -bang Qall qall
+command! -bang QALL qall
+
+" Still accessible via gQ, if the need ever arises.
+map Q <nop>
+
+" Unfold and center search results.
+noremap N Nzvzz
+noremap n nzvzz
+
+noremap <C-n> :cnext<CR>
+noremap <C-p> :cprevious<CR>
 " }}}
 
 " Autocommands {{{
@@ -112,7 +127,7 @@ let g:Tex_ViewRule_pdf = 'evince $*.pdf'
 " }}}
 
 " NERD-tree {{{
-nnoremap <silent> <c-n> :NERDTreeToggle<CR>
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeChDirMode = 2
