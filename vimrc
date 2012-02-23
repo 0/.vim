@@ -128,6 +128,7 @@ let g:Tex_ViewRule_pdf = 'evince $*.pdf'
 
 " NERD-tree {{{
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <leader>N :NERDTreeClose <bar> :NERDTreeFind<CR>
 
 let NERDTreeCaseSensitiveSort = 1
 let NERDTreeChDirMode = 2
