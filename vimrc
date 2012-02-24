@@ -92,6 +92,9 @@ noremap n nzvzz
 
 noremap <C-n> :cnext<CR>
 noremap <C-p> :cprevious<CR>
+
+" Repeat for each line of the selection.
+vnoremap . :normal .<CR>
 " }}}
 
 " Autocommands {{{
