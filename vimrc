@@ -183,6 +183,7 @@ let Tlist_Process_File_Always = 1
 " YankRing {{{
 nnoremap <leader>y :YRShow<cr>
 
+let g:yankring_history_dir = '~/.vim'
 let g:yankring_replace_n_pkey = '<leader>['
 let g:yankring_replace_n_nkey = '<leader>]'
 " }}}
