@@ -95,6 +95,9 @@ noremap <C-p> :cprevious<CR>
 
 " Repeat for each line of the selection.
 vnoremap . :normal .<CR>
+
+" Prefer logical to Vi-compatible.
+map Y y$
 " }}}
 
 " Autocommands {{{
