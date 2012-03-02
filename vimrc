@@ -106,7 +106,7 @@ map Y y$
 autocmd FileType lisp,racket setlocal expandtab
 
 " Go back to the last position when opening a file
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"zvzz" | endif
 " }}}
 " }}}
 
