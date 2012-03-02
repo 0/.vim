@@ -1,4 +1,5 @@
 # Machine-specific.
+.netrw*
 /spell/
 /undodir/
 /view/
