@@ -57,7 +57,8 @@ syntax enable                     " Syntax higlighting
 filetype plugin indent on         " Filetype-specific options
 
 " Highlight VCS conflict markers
-match ErrorMsg '^[<=>]\{7\}\([^=].\+\)\?$'
+highlight VCSConflict NONE
+match VCSConflict '^\([<|=>]\)\1\{6\}\1\@!'
 
 " Key mappings {{{
 let mapleader = ","
@@ -190,4 +191,9 @@ let g:yankring_history_dir = '~/.vim'
 let g:yankring_replace_n_pkey = '<leader>['
 let g:yankring_replace_n_nkey = '<leader>]'
 " }}}
+" }}}
+
+" Post-plugin settings {{{
+highlight VCSConflict ctermfg=0     ctermbg=208   cterm=bold
+highlight VCSConflict guifg=#000000 guibg=#ff8700 gui=bold
 " }}}
