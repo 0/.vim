@@ -80,9 +80,9 @@ inoremap <c-e> <ESC>A
 cnoremap w!! w !sudo tee % >/dev/null
 
 " I want to leave, especially if I'm holding shift.
-command! -bang Q    q
-command! -bang Qall qall
-command! -bang QALL qall
+command! -bang Q    q<bang>
+command! -bang Qall qall<bang>
+command! -bang QALL qall<bang>
 
 " Still accessible via gQ, if the need ever arises.
 map Q <nop>
