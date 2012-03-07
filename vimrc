@@ -4,6 +4,7 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 " General options {{{
+" Vim settings {{{
 set modelines=0                   " Don't look at modelines
 set shortmess=aI                  " Shorten all messages; don't show intro
 set wildmode=longest,list         " Better file tab completion
@@ -52,13 +53,7 @@ if has("persistent_undo")
 endif
 set spelllang=en_ca               " Canadian English
 set tags+=tags;                   " Search parents for tags
-
-syntax enable                     " Syntax higlighting
-filetype plugin indent on         " Filetype-specific options
-
-" Highlight VCS conflict markers
-highlight VCSConflict NONE
-match VCSConflict '^\([<|=>]\)\1\{6\}\1\@!'
+" }}}
 
 " Key mappings {{{
 let mapleader = ","
@@ -102,11 +97,23 @@ map Y y$
 " }}}
 
 " Autocommands {{{
+" Clear out existing autocommands, in case this file is re-sourced.
+autocmd!
+
 " Spaces are good for indentation sometimes
 autocmd FileType lisp,racket setlocal expandtab
 
 " Go back to the last position when opening a file
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"zvzz" | endif
+" }}}
+
+" Filetypes and highlighting {{{
+syntax enable                     " Syntax higlighting
+filetype plugin indent on         " Filetype-specific options
+
+" Highlight VCS conflict markers
+highlight VCSConflict NONE
+match VCSConflict '^\([<|=>]\)\1\{6\}\1\@!'
 " }}}
 " }}}
 
