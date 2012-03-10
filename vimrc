@@ -97,14 +97,16 @@ map Y y$
 " }}}
 
 " Autocommands {{{
-" Clear out existing autocommands, in case this file is re-sourced.
-autocmd!
+augroup vimrc
+	" Clear out existing autocommands, in case this file is re-sourced.
+	autocmd!
 
-" Spaces are good for indentation sometimes
-autocmd FileType lisp,racket setlocal expandtab
+	" Spaces are good for indentation sometimes
+	autocmd FileType lisp,racket setlocal expandtab
 
-" Go back to the last position when opening a file
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"zvzz" | endif
+	" Go back to the last position when opening a file
+	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"zvzz" | endif
+augroup END
 " }}}
 
 " Filetypes and highlighting {{{
