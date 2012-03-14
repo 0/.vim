@@ -122,6 +122,7 @@ match VCSConflict '^\([<|=>]\)\1\{6\}\1\@!'
 " Plugin settings {{{
 " Command-T {{{
 nnoremap <silent> <leader>j :CommandT<CR>
+nnoremap <silent> <leader>tf :CommandTFlush<CR>
 
 let g:CommandTMaxHeight = 15
 let g:CommandTMatchWindowReverse = 1
