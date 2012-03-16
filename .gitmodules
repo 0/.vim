@@ -98,6 +98,10 @@
 	path = bundle/threesome
 	url = git://github.com/sjl/threesome.vim.git
 	ignore = untracked
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git://github.com/SirVer/ultisnips.git
+	ignore = untracked
 [submodule "bundle/YankRing"]
 	path = bundle/YankRing
 	url = git://github.com/vim-scripts/YankRing.vim.git
