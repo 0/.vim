@@ -196,6 +196,12 @@ let Tlist_Process_File_Always = 1
 
 " ultisnips {{{
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
+
+" Workaround for Python message.
+if !has('python') && !has('python3')
+	let did_UltiSnips_vim = 1
+	let did_UltiSnips_vim_after=1
+endif
 " }}}
 
 " YankRing {{{
@@ -204,6 +210,11 @@ nnoremap <leader>y :YRShow<cr>
 let g:yankring_history_dir = '~/.vim'
 let g:yankring_replace_n_pkey = '<leader>['
 let g:yankring_replace_n_nkey = '<leader>]'
+
+" Workaround for unset variable.
+if !has('clipboard')
+	let g:yankring_manual_clipboard_check = 0
+endif
 " }}}
 " }}}
 
