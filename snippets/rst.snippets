@@ -1,0 +1,10 @@
+# Character class taken from syntax/rst.vim
+snippet /^([=`:.'"~^_*+#-])\1*(.)\2*/ "Heading" r
+`!p
+if match.group(1) != match.group(2):
+    snip.rv = match.group(1) * len(t[1]) + "\n"
+`${1:Title}
+`!p
+snip.rv = match.group(1) * len(t[1])
+`
+endsnippet

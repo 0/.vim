@@ -194,6 +194,10 @@ let Tlist_Close_On_Select = 1
 let Tlist_Process_File_Always = 1
 " }}}
 
+" ultisnips {{{
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
+" }}}
+
 " YankRing {{{
 nnoremap <leader>y :YRShow<cr>
 
