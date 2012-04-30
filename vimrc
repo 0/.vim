@@ -14,6 +14,7 @@ set hlsearch                      " Highlight search results
 set incsearch                     " Search as you type
 set ignorecase                    " Ignore case when searching
 set smartcase                     " But not always
+set nojoinspaces                  " Never insert two spaces
 set cursorline                    " Highlight the current line
 set virtualedit=block             " Allow block selection to go anywhere
 set scrolloff=5                   " Keep 5 lines when scrolling
