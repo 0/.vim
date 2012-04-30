@@ -21,10 +21,10 @@ notes.vim
 
 ``mkdir -p ~/notes.d/user``
 
-threesome.vim
--------------
+splice.vim
+----------
 
-``:help ThreesomeVCS``
+``:help SpliceVCS``
 
 taglist.vim
 -----------

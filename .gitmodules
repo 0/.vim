@@ -82,6 +82,10 @@
 	path = bundle/speeddating
 	url = git://github.com/vim-scripts/speeddating.vim.git
 	ignore = untracked
+[submodule "bundle/splice"]
+	path = bundle/splice
+	url = git://github.com/sjl/splice.vim.git
+	ignore = untracked
 [submodule "bundle/statline"]
 	path = bundle/statline
 	url = git://github.com/millermedeiros/vim-statline.git
@@ -93,10 +97,6 @@
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
-	ignore = untracked
-[submodule "bundle/threesome"]
-	path = bundle/threesome
-	url = git://github.com/sjl/threesome.vim.git
 	ignore = untracked
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
