@@ -42,6 +42,7 @@ if exists('+colorcolumn')
 endif
 set foldmethod=marker             " Fold on markers
 set foldcolumn=1                  " Show folds
+set formatoptions+=ro             " Insert the comment leader for new lines
 set list                          " Show whitespace
 set listchars=tab:»·,trail:·,nbsp:%
 set display=uhex                  " Show nonprintables as <xx>
