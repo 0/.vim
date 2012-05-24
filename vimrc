@@ -80,7 +80,8 @@ command! -bang Q    q<bang>
 command! -bang Qall qall<bang>
 command! -bang QALL qall<bang>
 
-" Still accessible via gQ, if the need ever arises.
+" These have only ever been a nuisance for me.
+map K <nop>
 map Q <nop>
 
 " Unfold and center search results.
