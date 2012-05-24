@@ -35,5 +35,5 @@ Updating
 ========
 
 #. ``git pull``
-#. ``git submodule update --init``
+#. ``git submodule update --init --recursive``
 #. ``vim +:Helptags +qa``
