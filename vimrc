@@ -89,8 +89,8 @@ map Q <nop>
 noremap N Nzvzz
 noremap n nzvzz
 
-noremap <C-n> :cnext<CR>
-noremap <C-p> :cprevious<CR>
+noremap <C-n> :silent cnext<CR>
+noremap <C-p> :silent cprevious<CR>
 
 " Repeat for each line of the selection.
 vnoremap . :normal .<CR>
