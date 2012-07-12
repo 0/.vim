@@ -14,6 +14,10 @@
 	path = bundle/Command-T
 	url = git://github.com/vim-scripts/Command-T.git
 	ignore = untracked
+[submodule "bundle/diffoffer"]
+	path = bundle/diffoffer
+	url = git://github.com/0/vim-diffoffer.git
+	ignore = untracked
 [submodule "bundle/extradite"]
 	path = bundle/extradite
 	url = git://github.com/int3/vim-extradite.git

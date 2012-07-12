@@ -97,6 +97,9 @@ vnoremap . :normal .<CR>
 
 " Prefer logical to Vi-compatible.
 map Y y$
+
+" Toggle diff.
+map <leader>dt :DiffofferToggle<CR>
 " }}}
 
 " Autocommands {{{
