@@ -102,6 +102,9 @@
 	path = bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
 	ignore = untracked
+[submodule "bundle/textobj-word-column"]
+	path = bundle/textobj-word-column
+	url = git://github.com/coderifous/textobj-word-column.vim.git
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
