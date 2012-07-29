@@ -110,6 +110,9 @@ augroup vimrc
 	" Spaces are good for indentation sometimes
 	autocmd FileType lisp,markdown,racket setlocal expandtab
 
+	" PHP test files are mostly PHP.
+	autocmd BufNewFile,BufRead *.phpt set ft=php
+
 	" Go back to the last position when opening a file
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"zvzz" | endif
 augroup END
