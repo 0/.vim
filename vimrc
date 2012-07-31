@@ -182,6 +182,10 @@ let g:notes_tagsindex = notes_dir . 'tags'
 let g:nrrw_rgn_protect = 'n'
 " }}}
 
+" slime {{{
+let g:slime_python_ipython = 1
+" }}}
+
 " statline {{{
 let g:statline_fugitive = 1
 let g:statline_show_n_buffers = 0
