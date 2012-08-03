@@ -97,9 +97,6 @@ vnoremap . :normal .<CR>
 
 " Prefer logical to Vi-compatible.
 map Y y$
-
-" Toggle diff.
-map <leader>dt :DiffofferToggle<CR>
 " }}}
 
 " Autocommands {{{
@@ -135,6 +132,12 @@ nnoremap <silent> <leader>tf :CommandTFlush<CR>
 
 let g:CommandTMaxHeight = 15
 let g:CommandTMatchWindowReverse = 1
+" }}}
+
+" diffoffer {{{
+map <leader>dod :DiffofferToggleDiff<CR>
+map <leader>dof :DiffofferToggleFiller<CR>
+map <leader>dou :diffupdate<CR>
 " }}}
 
 " Gundo {{{
