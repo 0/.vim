@@ -107,6 +107,9 @@ augroup vimrc
 	" Spaces are good for indentation sometimes
 	autocmd FileType lisp,markdown,racket setlocal expandtab
 
+	" ASDF files are Lisp.
+	autocmd BufNewFile,BufRead *.asd set ft=lisp
+
 	" PHP test files are mostly PHP.
 	autocmd BufNewFile,BufRead *.phpt set ft=php
 
