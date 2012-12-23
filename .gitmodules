@@ -18,6 +18,10 @@
 	path = bundle/diffoffer
 	url = git://github.com/0/vim-diffoffer.git
 	ignore = untracked
+[submodule "bundle/eunuch"]
+	path = bundle/eunuch
+	url = git://github.com/tpope/vim-eunuch.git
+	ignore = untracked
 [submodule "bundle/extradite"]
 	path = bundle/extradite
 	url = git://github.com/int3/vim-extradite.git
@@ -105,6 +109,10 @@
 [submodule "bundle/textobj-word-column"]
 	path = bundle/textobj-word-column
 	url = git://github.com/coderifous/textobj-word-column.vim.git
+	ignore = untracked
+[submodule "bundle/vim2hs"]
+	path = bundle/vim2hs
+	url = git://github.com/dag/vim2hs.git
 	ignore = untracked
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
