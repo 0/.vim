@@ -37,3 +37,14 @@ Updating
 #. ``git pull``
 #. ``git submodule update --init --recursive``
 #. ``vim +:Helptags +qa``
+
+Workarounds
+===========
+
+Certain plugins require workarounds. The current list includes:
+
+a
+-
+
+It creates mappings that get in the way of typing. Fixed in
+``after/plugin/a.vim``.

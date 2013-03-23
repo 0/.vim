@@ -217,13 +217,8 @@ let Tlist_Process_File_Always = 1
 " }}}
 
 " ultisnips {{{
+let g:UltiSnipsNoPythonWarning = 1
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
-
-" Workaround for Python message.
-if !has('python') && !has('python3')
-	let did_UltiSnips_vim = 1
-	let did_UltiSnips_vim_after=1
-endif
 " }}}
 
 " vim2hs {{{
