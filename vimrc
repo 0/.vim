@@ -107,8 +107,8 @@ augroup vimrc
 	" Spaces are good for indentation sometimes
 	autocmd FileType haskell,lisp,markdown,racket setlocal expandtab
 
-	" .hsc files are Haskell.
-	autocmd BufNewFile,BufRead *.hsc set ft=haskell
+	" .hsc files are Haskell. Elm files are Haskellesque.
+	autocmd BufNewFile,BufRead *.hsc,*.elm set ft=haskell
 
 	" ASDF files are Lisp.
 	autocmd BufNewFile,BufRead *.asd set ft=lisp
@@ -224,6 +224,10 @@ if !has('python') && !has('python3')
 	let did_UltiSnips_vim = 1
 	let did_UltiSnips_vim_after=1
 endif
+" }}}
+
+" vim2hs {{{
+let g:haskell_conceal_enumerations = 0
 " }}}
 
 " YankRing {{{
