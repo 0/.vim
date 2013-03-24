@@ -96,7 +96,7 @@ noremap <C-p> :silent cprevious<CR>
 vnoremap . :normal .<CR>
 
 " Prefer logical to Vi-compatible.
-map Y y$
+noremap Y y$
 " }}}
 
 " Autocommands {{{
@@ -231,6 +231,11 @@ nnoremap <leader>y :YRShow<cr>
 let g:yankring_history_dir = '~/.vim'
 let g:yankring_replace_n_pkey = '<leader>['
 let g:yankring_replace_n_nkey = '<leader>]'
+
+" Make YankRing aware of my mapping for Y.
+function! YRRunAfterMaps()
+	nnoremap Y :<C-U>YRYankCount 'y$'<CR>
+endfunction
 " }}}
 " }}}
 
