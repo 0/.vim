@@ -42,6 +42,10 @@
 	path = bundle/Gundo
 	url = git://github.com/vim-scripts/Gundo.git
 	ignore = untracked
+[submodule "bundle/jedi"]
+	path = bundle/jedi
+	url = https://github.com/davidhalter/jedi-vim.git
+	ignore = untracked
 [submodule "bundle/LaTeX-Suite"]
 	path = bundle/LaTeX-Suite
 	url = git://github.com/jnwhiteh/LaTeX-Suite-aka-Vim-LaTeX

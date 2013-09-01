@@ -150,6 +150,10 @@ map <leader>dou :diffupdate<CR>
 nnoremap <leader>u :silent GundoToggle<CR>
 " }}}
 
+" jedi {{{
+let g:jedi#popup_on_dot = 0
+" }}}
+
 " LaTeX-Suite {{{
 set grepprg=grep\ -nH\ $*
 
