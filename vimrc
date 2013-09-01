@@ -189,6 +189,8 @@ let notes_dir = '~/notes.d/'
 let g:notes_directory = notes_dir . 'user'
 let g:notes_indexfile = notes_dir . 'index'
 let g:notes_tagsindex = notes_dir . 'tags'
+
+let g:notes_smart_quotes = 0
 " }}}
 
 " NrrwRgn {{{
