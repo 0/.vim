@@ -16,18 +16,18 @@ Command-T
 
 ``:help command-t-installation``
 
-notes.vim
----------
+notes
+-----
 
 ``mkdir -p ~/notes.d/user``
 
-splice.vim
-----------
+splice
+------
 
 ``:help SpliceVCS``
 
-taglist.vim
------------
+taglist
+-------
 
 Install `Exuberant Ctags <http://ctags.sourceforge.net/>`_.
 
