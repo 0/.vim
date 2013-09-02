@@ -1,7 +1,7 @@
 set nocompatible
 
 runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
+execute pathogen#infect()
 
 " General options {{{
 " Vim settings {{{
@@ -186,7 +186,7 @@ colorscheme neverland-darker
 let g:notes_shadowdir = '~/.vim/notes-shadow'
 
 let notes_dir = '~/notes.d/'
-let g:notes_directory = notes_dir . 'user'
+let g:notes_directories = [notes_dir . 'user']
 let g:notes_indexfile = notes_dir . 'index'
 let g:notes_tagsindex = notes_dir . 'tags'
 

@@ -122,6 +122,10 @@
 	path = bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
 	ignore = untracked
+[submodule "bundle/xolox-misc"]
+	path = bundle/xolox-misc
+	url = https://github.com/xolox/vim-misc.git
+	ignore = untracked
 [submodule "bundle/YankRing"]
 	path = bundle/YankRing
 	url = git://github.com/vim-scripts/YankRing.vim.git
