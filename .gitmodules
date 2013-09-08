@@ -10,10 +10,6 @@
 	path = bundle/Arduino-syntax-file
 	url = git://github.com/vim-scripts/Arduino-syntax-file.git
 	ignore = untracked
-[submodule "bundle/Command-T"]
-	path = bundle/Command-T
-	url = git://github.com/vim-scripts/Command-T.git
-	ignore = untracked
 [submodule "bundle/diffoffer"]
 	path = bundle/diffoffer
 	url = git://github.com/0/vim-diffoffer.git
@@ -57,10 +53,6 @@
 [submodule "bundle/NERD-Commenter"]
 	path = bundle/NERD-Commenter
 	url = git://github.com/vim-scripts/The-NERD-Commenter.git
-	ignore = untracked
-[submodule "bundle/NERD-tree"]
-	path = bundle/NERD-tree
-	url = git://github.com/vim-scripts/The-NERD-tree.git
 	ignore = untracked
 [submodule "bundle/neverland"]
 	path = bundle/neverland
@@ -106,10 +98,6 @@
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
 	ignore = untracked
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = git://github.com/vim-scripts/taglist.vim.git
-	ignore = untracked
 [submodule "bundle/textobj-word-column"]
 	path = bundle/textobj-word-column
 	url = git://github.com/coderifous/textobj-word-column.vim.git
@@ -118,15 +106,27 @@
 	path = bundle/vim2hs
 	url = git://github.com/dag/vim2hs.git
 	ignore = untracked
+[submodule "bundle/vimfiler"]
+	path = bundle/vimfiler
+	url = https://github.com/Shougo/vimfiler.vim.git
+	ignore = untracked
+[submodule "bundle/vimproc"]
+	path = bundle/vimproc
+	url = https://github.com/Shougo/vimproc.vim.git
+	ignore = untracked
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
 	ignore = untracked
+[submodule "bundle/unite"]
+	path = bundle/unite
+	url = https://github.com/Shougo/unite.vim.git
+	ignore = untracked
+[submodule "bundle/unite-outline"]
+	path = bundle/unite-outline
+	url = https://github.com/Shougo/unite-outline.git
+	ignore = untracked
 [submodule "bundle/xolox-misc"]
 	path = bundle/xolox-misc
 	url = https://github.com/xolox/vim-misc.git
-	ignore = untracked
-[submodule "bundle/YankRing"]
-	path = bundle/YankRing
-	url = git://github.com/vim-scripts/YankRing.vim.git
 	ignore = untracked

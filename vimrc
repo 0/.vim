@@ -97,6 +97,10 @@ vnoremap . :normal .<CR>
 
 " Prefer logical to Vi-compatible.
 noremap Y y$
+
+" Unite prefix key.
+nnoremap [unite] <Nop>
+nmap <Space> [unite]
 " }}}
 
 " Autocommands {{{
@@ -132,14 +136,6 @@ match VCSConflict '^\([<|=>]\)\1\{6\}\1\@!'
 " }}}
 
 " Plugin settings {{{
-" Command-T {{{
-nnoremap <silent> <leader>j :CommandT<CR>
-nnoremap <silent> <leader>tf :CommandTFlush<CR>
-
-let g:CommandTMaxHeight = 15
-let g:CommandTMatchWindowReverse = 1
-" }}}
-
 " diffoffer {{{
 map <leader>dod :DiffofferToggleDiff<CR>
 map <leader>dof :DiffofferToggleFiller<CR>
@@ -163,19 +159,6 @@ let g:Tex_CompileRule_pdf = 'xelatex $*'
 let g:Tex_MultipleCompileFormats = 'pdf'
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_pdf = 'evince $*.pdf'
-" }}}
-
-" NERD-tree {{{
-nnoremap <silent> <leader>n :NERDTreeToggle<CR>
-nnoremap <silent> <leader>N :NERDTreeClose <bar> :NERDTreeFind<CR>
-
-let NERDTreeCaseSensitiveSort = 1
-let NERDTreeChDirMode = 2
-let NERDTreeIgnore  = ['\.o$', '\~$']
-let NERDTreeIgnore += ['\.aux$', '\.bbl$', '\.blg$']
-let NERDTreeIgnore += ['\.pyc$', '\.pyo$']
-let NERDTreeIgnore += ['\.class$']
-let NERDTreeQuitOnOpen = 1
 " }}}
 
 " neverland {{{
@@ -208,40 +191,47 @@ let g:statline_filename_relative = 1
 let g:statline_show_charcode = 1
 " }}}
 
-" taglist {{{
-nnoremap <silent> <c-l> :TlistToggle<CR>
-
-let Tlist_Use_Horiz_Window=0
-let Tlist_Use_Right_Window = 1
-let Tlist_Compact_Format = 1
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_File_Fold_Auto_Close = 1
-let Tlist_Inc_Winwidth = 0
-let Tlist_Close_On_Select = 1
-let Tlist_Process_File_Always = 1
-" }}}
-
 " ultisnips {{{
 let g:UltiSnipsNoPythonWarning = 1
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
+" }}}
+
+" unite {{{
+nnoremap <silent> [unite]b :<C-u>Unite -quick-match buffer file_mru bookmark<CR>
+nnoremap <silent> [unite]j :<C-u>Unite -start-insert file_rec/async:!<CR>
+nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+
+let g:unite_data_directory = expand('~/.vim/unite')
+let g:unite_source_file_mru_time_format = ''
+let g:unite_source_history_yank_enable = 1
+let g:unite_split_rule = "botright"
+
+autocmd FileType unite call s:unite_custom_settings()
+
+function! s:unite_custom_settings()
+	imap <buffer> <C-j> <Plug>(unite_select_next_line)
+	imap <buffer> <C-k> <Plug>(unite_select_previous_line)
+endfunction
+" }}}
+
+" unite-outline {{{
+nnoremap <silent> [unite]o :<C-u>Unite -auto-highlight -vertical -winwidth=50 outline<CR>
 " }}}
 
 " vim2hs {{{
 let g:haskell_conceal_enumerations = 0
 " }}}
 
-" YankRing {{{
-nnoremap <leader>y :YRShow<cr>
+" vimfiler {{{
+nnoremap <silent> [unite]n :VimFilerExplorer -find<CR>
 
-let g:yankring_history_dir = '~/.vim'
-let g:yankring_replace_n_pkey = '<leader>['
-let g:yankring_replace_n_nkey = '<leader>]'
+let g:vimfiler_as_default_explorer = 1
 
-" Make YankRing aware of my mapping for Y.
-function! YRRunAfterMaps()
-	nnoremap Y :<C-U>YRYankCount 'y$'<CR>
-endfunction
+" Ignore dotfiles, unwanted files, backup files, and some extensions.
+let s:vf_ig_prefixes = '^\%(' . join(['\.'], '\|') . '\)'
+let s:vf_ig_names = '^\%(' . join(['tags'], '\|') . '\)$'
+let s:vf_ig_suffixes = '\%(' . join(['\~'] + map(['aux', 'bbl', 'blg', 'class', 'o', 'pyc', 'pyo'], '"\\." . v:val'), '\|') . '\)$'
+let g:vimfiler_ignore_pattern = join([s:vf_ig_prefixes, s:vf_ig_names, s:vf_ig_suffixes], '\|')
 " }}}
 " }}}
 

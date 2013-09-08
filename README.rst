@@ -11,25 +11,17 @@ Installation
 #. ``ln -s ~/.vim/vimrc ~/.vimrc``
 #. ``vim +:Helptags +qa``
 
-Command-T
----------
-
-``:help command-t-installation``
-
-notes
------
-
-``mkdir -p ~/notes.d/user``
-
 splice
 ------
 
 ``:help SpliceVCS``
 
-taglist
+vimproc
 -------
 
-Install `Exuberant Ctags <http://ctags.sourceforge.net/>`_.
+Used by unite.
+
+``:help vimproc-install``
 
 Updating
 ========
