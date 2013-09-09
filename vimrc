@@ -197,6 +197,7 @@ let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
 " }}}
 
 " unite {{{
+nnoremap <silent> [unite]<Space> :<C-u>Unite -start-insert source<CR>
 nnoremap <silent> [unite]b :<C-u>Unite -quick-match buffer file_mru bookmark<CR>
 nnoremap <silent> [unite]j :<C-u>Unite -start-insert file_rec/async:!<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
@@ -211,6 +212,8 @@ autocmd FileType unite call s:unite_custom_settings()
 function! s:unite_custom_settings()
 	imap <buffer> <C-j> <Plug>(unite_select_next_line)
 	imap <buffer> <C-k> <Plug>(unite_select_previous_line)
+
+	imap <buffer> <C-p> <Plug>(unite_toggle_auto_preview)
 endfunction
 " }}}
 
