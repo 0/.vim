@@ -2,6 +2,10 @@
 	path = bundle/a
 	url = git://github.com/vim-scripts/a.vim.git
 	ignore = untracked
+[submodule "bundle/airline"]
+	path = bundle/airline
+	url = https://github.com/bling/vim-airline.git
+	ignore = untracked
 [submodule "bundle/Align"]
 	path = bundle/Align
 	url = git://github.com/vim-scripts/Align.git
@@ -78,6 +82,10 @@
 	path = bundle/repeat
 	url = git://github.com/tpope/vim-repeat.git
 	ignore = untracked
+[submodule "bundle/signature"]
+	path = bundle/signature
+	url = https://github.com/kshenoy/vim-signature.git
+	ignore = untracked
 [submodule "bundle/slime"]
 	path = bundle/slime
 	url = git://github.com/jpalardy/vim-slime.git
@@ -89,10 +97,6 @@
 [submodule "bundle/splice"]
 	path = bundle/splice
 	url = git://github.com/sjl/splice.vim.git
-	ignore = untracked
-[submodule "bundle/statline"]
-	path = bundle/statline
-	url = git://github.com/millermedeiros/vim-statline.git
 	ignore = untracked
 [submodule "bundle/surround"]
 	path = bundle/surround
@@ -125,6 +129,10 @@
 [submodule "bundle/unite-outline"]
 	path = bundle/unite-outline
 	url = https://github.com/Shougo/unite-outline.git
+	ignore = untracked
+[submodule "bundle/vinarise"]
+	path = bundle/vinarise
+	url = https://github.com/Shougo/vinarise.vim.git
 	ignore = untracked
 [submodule "bundle/xolox-misc"]
 	path = bundle/xolox-misc
