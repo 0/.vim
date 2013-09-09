@@ -4,7 +4,7 @@
 	ignore = untracked
 [submodule "bundle/airline"]
 	path = bundle/airline
-	url = https://github.com/bling/vim-airline.git
+	url = git://github.com/bling/vim-airline.git
 	ignore = untracked
 [submodule "bundle/Align"]
 	path = bundle/Align
@@ -32,7 +32,7 @@
 	ignore = untracked
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = git://github.com/vim-scripts/fugitive.vim.git
+	url = git://github.com/tpope/vim-fugitive.git
 	ignore = untracked
 [submodule "bundle/gitv"]
 	path = bundle/gitv
@@ -44,7 +44,7 @@
 	ignore = untracked
 [submodule "bundle/jedi"]
 	path = bundle/jedi
-	url = https://github.com/davidhalter/jedi-vim.git
+	url = git://github.com/davidhalter/jedi-vim.git
 	ignore = untracked
 [submodule "bundle/LaTeX-Suite"]
 	path = bundle/LaTeX-Suite
@@ -84,7 +84,7 @@
 	ignore = untracked
 [submodule "bundle/signature"]
 	path = bundle/signature
-	url = https://github.com/kshenoy/vim-signature.git
+	url = git://github.com/kshenoy/vim-signature.git
 	ignore = untracked
 [submodule "bundle/slime"]
 	path = bundle/slime
@@ -112,11 +112,11 @@
 	ignore = untracked
 [submodule "bundle/vimfiler"]
 	path = bundle/vimfiler
-	url = https://github.com/Shougo/vimfiler.vim.git
+	url = git://github.com/Shougo/vimfiler.vim.git
 	ignore = untracked
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
-	url = https://github.com/Shougo/vimproc.vim.git
+	url = git://github.com/Shougo/vimproc.vim.git
 	ignore = untracked
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
@@ -124,17 +124,17 @@
 	ignore = untracked
 [submodule "bundle/unite"]
 	path = bundle/unite
-	url = https://github.com/Shougo/unite.vim.git
+	url = git://github.com/Shougo/unite.vim.git
 	ignore = untracked
 [submodule "bundle/unite-outline"]
 	path = bundle/unite-outline
-	url = https://github.com/Shougo/unite-outline.git
+	url = git://github.com/Shougo/unite-outline.git
 	ignore = untracked
 [submodule "bundle/vinarise"]
 	path = bundle/vinarise
-	url = https://github.com/Shougo/vinarise.vim.git
+	url = git://github.com/Shougo/vinarise.vim.git
 	ignore = untracked
 [submodule "bundle/xolox-misc"]
 	path = bundle/xolox-misc
-	url = https://github.com/xolox/vim-misc.git
+	url = git://github.com/xolox/vim-misc.git
 	ignore = untracked
