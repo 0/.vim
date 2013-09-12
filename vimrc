@@ -6,7 +6,7 @@ execute pathogen#infect()
 " General options {{{
 " Vim settings {{{
 set modelines=0                   " Don't look at modelines
-set shortmess=aI                  " Shorten all messages; don't show intro
+set shortmess=aIO                 " Abbr. all; no intro; reads squash
 set wildmode=longest,list         " Better file tab completion
 set tabstop=4                     " A 4-space tab seems reasonable
 set shiftwidth=4
