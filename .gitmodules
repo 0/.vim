@@ -58,6 +58,10 @@
 	path = bundle/NERD-Commenter
 	url = git://github.com/vim-scripts/The-NERD-Commenter.git
 	ignore = untracked
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+	ignore = untracked
 [submodule "bundle/neverland"]
 	path = bundle/neverland
 	url = git://github.com/0/neverland-vim-theme
@@ -109,10 +113,6 @@
 [submodule "bundle/vim2hs"]
 	path = bundle/vim2hs
 	url = git://github.com/dag/vim2hs.git
-	ignore = untracked
-[submodule "bundle/vimfiler"]
-	path = bundle/vimfiler
-	url = git://github.com/Shougo/vimfiler.vim.git
 	ignore = untracked
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc

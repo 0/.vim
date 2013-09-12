@@ -165,6 +165,20 @@ let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_ViewRule_pdf = 'evince $*.pdf'
 " }}}
 
+" nerdtree {{{
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+nnoremap <silent> <leader>N :NERDTreeClose <bar> :NERDTreeFind<CR>
+
+let NERDTreeCaseSensitiveSort = 1
+let NERDTreeChDirMode = 2
+let NERDTreeIgnore  = ['^tags$']
+let NERDTreeIgnore += ['\~$', '\.o$']
+let NERDTreeIgnore += ['\.aux$', '\.bbl$', '\.blg$']
+let NERDTreeIgnore += ['\.pyc$', '\.pyo$']
+let NERDTreeIgnore += ['\.class$']
+let NERDTreeQuitOnOpen = 1
+" }}}
+
 " neverland {{{
 colorscheme neverland-darker
 " }}}
@@ -220,18 +234,6 @@ nnoremap <silent> [unite]o :<C-u>Unite -auto-highlight -vertical -winwidth=50 ou
 
 " vim2hs {{{
 let g:haskell_conceal_enumerations = 0
-" }}}
-
-" vimfiler {{{
-nnoremap <silent> [unite]n :VimFilerExplorer -find<CR>
-
-let g:vimfiler_as_default_explorer = 1
-
-" Ignore dotfiles, unwanted files, backup files, and some extensions.
-let s:vf_ig_prefixes = '^\%(' . join(['\.'], '\|') . '\)'
-let s:vf_ig_names = '^\%(' . join(['tags'], '\|') . '\)$'
-let s:vf_ig_suffixes = '\%(' . join(['\~'] + map(['aux', 'bbl', 'blg', 'class', 'o', 'pyc', 'pyo'], '"\\." . v:val'), '\|') . '\)$'
-let g:vimfiler_ignore_pattern = join([s:vf_ig_prefixes, s:vf_ig_names, s:vf_ig_suffixes], '\|')
 " }}}
 " }}}
 
