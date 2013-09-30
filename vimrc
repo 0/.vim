@@ -154,6 +154,9 @@ nnoremap <leader>u :silent GundoToggle<CR>
 
 " jedi {{{
 let g:jedi#popup_on_dot = 0
+
+" I don't use this feature, but I do use <leader>n elsewhere.
+let g:jedi#usages_command = ''
 " }}}
 
 " LaTeX-Suite {{{
