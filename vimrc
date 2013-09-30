@@ -211,8 +211,12 @@ let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
 " unite {{{
 nnoremap <silent> [unite]<Space> :<C-u>Unite -start-insert source<CR>
 nnoremap <silent> [unite]b :<C-u>Unite -quick-match buffer file_mru bookmark<CR>
-nnoremap <silent> [unite]j :<C-u>Unite -start-insert file_rec/async:!<CR>
 nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
+
+" Current dir.
+nnoremap <silent> [unite]j :<C-u>Unite -start-insert file_rec/async<CR>
+" Project dir.
+nnoremap <silent> [unite]k :<C-u>Unite -start-insert file_rec/async:!<CR>
 
 let g:unite_data_directory = expand('~/.vim/unite')
 let g:unite_source_file_mru_time_format = ''
