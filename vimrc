@@ -136,6 +136,9 @@ filetype plugin indent on         " Filetype-specific options
 " Highlight VCS conflict markers
 highlight VCSConflict NONE
 match VCSConflict '^\([<|=>]\)\1\{6\}\1\@!'
+
+" Complain about trailing whitespace
+match Error '\s\+$'
 " }}}
 " }}}
 
