@@ -54,6 +54,10 @@
 	path = bundle/matchit
 	url = git://github.com/vim-scripts/matchit.zip.git
 	ignore = untracked
+[submodule "bundle/neomru"]
+	path = bundle/neomru
+	url = https://github.com/Shougo/neomru.vim.git
+	ignore = untracked
 [submodule "bundle/NERD-Commenter"]
 	path = bundle/NERD-Commenter
 	url = git://github.com/vim-scripts/The-NERD-Commenter.git
