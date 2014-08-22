@@ -86,6 +86,10 @@
 	path = bundle/repeat
 	url = git://github.com/tpope/vim-repeat.git
 	ignore = untracked
+[submodule "bundle/SearchParty"]
+	path = bundle/SearchParty
+	url = https://github.com/dahu/SearchParty.git
+	ignore = untracked
 [submodule "bundle/signature"]
 	path = bundle/signature
 	url = git://github.com/kshenoy/vim-signature.git
