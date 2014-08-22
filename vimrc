@@ -12,6 +12,8 @@ set wildmode=longest,list         " Better file tab completion
 set backspace=indent,eol,start    " Backspace over everything
 set tabstop=4                     " A 4-space tab seems reasonable
 set shiftwidth=4
+set copyindent                    " Keep existing indentation
+set preserveindent
 set hlsearch                      " Highlight search results
 set incsearch                     " Search as you type
 set ignorecase                    " Ignore case when searching
