@@ -94,6 +94,10 @@
 	path = bundle/slime
 	url = git://github.com/jpalardy/vim-slime.git
 	ignore = untracked
+[submodule "bundle/snippets"]
+	path = bundle/snippets
+	url = https://github.com/honza/vim-snippets.git
+	ignore = untracked
 [submodule "bundle/speeddating"]
 	path = bundle/speeddating
 	url = git://github.com/vim-scripts/speeddating.vim.git
