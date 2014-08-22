@@ -202,7 +202,7 @@ let g:slime_python_ipython = 1
 
 " ultisnips {{{
 let g:UltiSnipsNoPythonWarning = 1
-let g:UltiSnipsSnippetDirectories = ["UltiSnips", "snippets"]
+let g:UltiSnipsSnippetDirectories = ["UltiSnips", "ulti_snippets"]
 " }}}
 
 " unite {{{
