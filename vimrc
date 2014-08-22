@@ -143,6 +143,29 @@ match Error '\s\+$'
 " }}}
 
 " Plugin settings {{{
+" airline {{{
+" Use the short mode labels given in the documentation.
+let g:airline_mode_map = {
+			\ '__' : '-',
+			\ 'n'  : 'N',
+			\ 'i'  : 'I',
+			\ 'R'  : 'R',
+			\ 'c'  : 'C',
+			\ 'v'  : 'V',
+			\ 'V'  : 'V',
+			\ '' : 'V',
+			\ 's'  : 'S',
+			\ 'S'  : 'S',
+			\ '' : 'S',
+			\ }
+
+" Use the airline tabline.
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tab_type = 0
+let g:airline#extensions#tabline#tab_min_count = 2
+" }}}
+
 " diffoffer {{{
 map <leader>dod :DiffofferToggleDiff<CR>
 map <leader>dof :DiffofferToggleFiller<CR>
