@@ -133,10 +133,6 @@ augroup END
 syntax enable                     " Syntax higlighting
 filetype plugin indent on         " Filetype-specific options
 
-" Highlight VCS conflict markers
-highlight VCSConflict NONE
-match VCSConflict '^\([<|=>]\)\1\{6\}\1\@!'
-
 " Complain about trailing whitespace
 match Error '\s\+$'
 " }}}
@@ -265,9 +261,4 @@ nnoremap <silent> [unite]o :<C-u>Unite -auto-highlight -vertical -winwidth=50 ou
 " vim2hs {{{
 let g:haskell_conceal_enumerations = 0
 " }}}
-" }}}
-
-" Post-plugin settings {{{
-highlight VCSConflict ctermfg=0     ctermbg=208   cterm=bold
-highlight VCSConflict guifg=#000000 guibg=#ff8700 gui=bold
 " }}}
