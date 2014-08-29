@@ -7,7 +7,7 @@ Plugins are included as submodules and managed using `pathogen <https://github.c
 Installation
 ============
 
-#. ``git clone --recursive git://github.com/0/.vim.git ~/.vim``
+#. ``git clone --recursive https://github.com/0/.vim.git ~/.vim``
 #. ``ln -s ~/.vim/vimrc ~/.vimrc``
 #. ``vim +:Helptags +qa``
 
@@ -19,8 +19,6 @@ splice
 vimproc
 -------
 
-Used by unite.
-
 ``:help vimproc-install``
 
 Updating
@@ -29,6 +27,16 @@ Updating
 #. ``git pull``
 #. ``git submodule update --init --recursive``
 #. ``vim +:Helptags +qa``
+#. Rebuild plugins as necessary.
+
+Plugin dependencies
+===================
+
+Some plugins are not interesting on their own, but are included to satisfy dependencies of other plugins:
+
+* repeat: various (typically optional)
+* vimproc: unite, vinarise
+* xolox-misc: notes
 
 Workarounds
 ===========
