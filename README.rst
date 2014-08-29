@@ -34,6 +34,8 @@ Plugin dependencies
 
 Some plugins are not interesting on their own, but are included to satisfy dependencies of other plugins:
 
+* CountJump: ConflictMotions
+* ingo-library: ConflictDetection, ConflictMotions
 * repeat: various (typically optional)
 * vimproc: unite, vinarise
 * xolox-misc: notes

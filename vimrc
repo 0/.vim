@@ -162,6 +162,10 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#tab_min_count = 2
 " }}}
 
+" ConflictMotions
+let g:ConflictMotions_MarkerMapping = ''
+" }}}
+
 " diffoffer {{{
 map <leader>dod :DiffofferToggleDiff<CR>
 map <leader>dof :DiffofferToggleFiller<CR>

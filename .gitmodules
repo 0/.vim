@@ -14,6 +14,18 @@
 	path = bundle/Arduino-syntax-file
 	url = git://github.com/vim-scripts/Arduino-syntax-file.git
 	ignore = untracked
+[submodule "bundle/ConflictDetection"]
+	path = bundle/ConflictDetection
+	url = https://github.com/vim-scripts/ConflictDetection.git
+	ignore = untracked
+[submodule "bundle/ConflictMotions"]
+	path = bundle/ConflictMotions
+	url = https://github.com/vim-scripts/ConflictMotions.git
+	ignore = untracked
+[submodule "bundle/CountJump"]
+	path = bundle/CountJump
+	url = https://github.com/vim-scripts/CountJump.git
+	ignore = untracked
 [submodule "bundle/diffoffer"]
 	path = bundle/diffoffer
 	url = git://github.com/0/vim-diffoffer.git
@@ -41,6 +53,10 @@
 [submodule "bundle/Gundo"]
 	path = bundle/Gundo
 	url = git://github.com/vim-scripts/Gundo.git
+	ignore = untracked
+[submodule "bundle/ingo-library"]
+	path = bundle/ingo-library
+	url = https://github.com/vim-scripts/ingo-library.git
 	ignore = untracked
 [submodule "bundle/julia"]
 	path = bundle/julia
