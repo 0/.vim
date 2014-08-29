@@ -78,6 +78,10 @@
 	path = bundle/NrrwRgn
 	url = git://github.com/chrisbra/NrrwRgn.git
 	ignore = untracked
+[submodule "bundle/paredit"]
+	path = bundle/paredit
+	url = https://github.com/kovisoft/paredit.git
+	ignore = untracked
 [submodule "bundle/pathogen"]
 	path = bundle/pathogen
 	url = git://github.com/tpope/vim-pathogen.git
