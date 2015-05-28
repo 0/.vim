@@ -113,7 +113,7 @@ augroup vimrc
 	autocmd!
 
 	" Spaces are good for indentation sometimes
-	autocmd FileType haskell,lisp,markdown,racket setlocal expandtab
+	autocmd FileType haskell,lisp,markdown,pyrex,python,racket setlocal expandtab
 
 	" .hsc files are Haskell. Elm files are Haskellesque.
 	autocmd BufNewFile,BufRead *.hsc,*.elm set ft=haskell
