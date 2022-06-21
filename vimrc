@@ -101,10 +101,6 @@ vnoremap . :normal .<CR>
 
 " Prefer logical to Vi-compatible.
 noremap Y y$
-
-" Unite prefix key.
-nnoremap [unite] <Nop>
-nmap <Space> [unite]
 " }}}
 
 " Autocommands {{{
@@ -176,21 +172,6 @@ map <leader>dou :diffupdate<CR>
 let g:extradite_showhash = 1
 " }}}
 
-" Gundo {{{
-nnoremap <leader>u :silent GundoToggle<CR>
-" }}}
-
-" LaTeX-Suite {{{
-set grepprg=grep\ -nH\ $*
-
-let g:tex_flavor = "xetex"
-let g:Tex_FormatDependency_pdf = 'pdf'
-let g:Tex_CompileRule_pdf = 'xelatex $*'
-let g:Tex_MultipleCompileFormats = 'pdf'
-let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_ViewRule_pdf = 'evince $*.pdf'
-" }}}
-
 " nerdtree {{{
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <leader>N :NERDTreeClose <bar> :NERDTreeFind<CR>
@@ -231,38 +212,5 @@ let g:slime_python_ipython = 1
 " ultisnips {{{
 let g:UltiSnipsNoPythonWarning = 1
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "ulti_snippets"]
-" }}}
-
-" unite {{{
-nnoremap <silent> [unite]<Space> :<C-u>Unite -start-insert source<CR>
-nnoremap <silent> [unite]b :<C-u>Unite -quick-match buffer file_mru bookmark<CR>
-nnoremap <silent> [unite]y :<C-u>Unite history/yank<CR>
-
-" Current dir.
-nnoremap <silent> [unite]j :<C-u>Unite -start-insert file_rec/async<CR>
-" Project dir.
-nnoremap <silent> [unite]k :<C-u>Unite -start-insert file_rec/async:!<CR>
-
-let g:unite_data_directory = expand('~/.vim/unite')
-let g:unite_source_file_mru_time_format = ''
-let g:unite_source_history_yank_enable = 1
-let g:unite_split_rule = "botright"
-
-autocmd FileType unite call s:unite_custom_settings()
-
-function! s:unite_custom_settings()
-	imap <buffer> <C-j> <Plug>(unite_select_next_line)
-	imap <buffer> <C-k> <Plug>(unite_select_previous_line)
-
-	imap <buffer> <C-p> <Plug>(unite_toggle_auto_preview)
-endfunction
-" }}}
-
-" unite-outline {{{
-nnoremap <silent> [unite]o :<C-u>Unite -auto-highlight -vertical -winwidth=50 outline<CR>
-" }}}
-
-" vim2hs {{{
-let g:haskell_conceal_enumerations = 0
 " }}}
 " }}}

@@ -16,18 +16,12 @@ splice
 
 ``:help SpliceVCS``
 
-vimproc
--------
-
-``:help vimproc-install``
-
 Updating
 ========
 
 #. ``git pull``
 #. ``git submodule update --init --recursive``
 #. ``vim +:Helptags +qa``
-#. Rebuild plugins as necessary.
 
 Plugin dependencies
 ===================
@@ -37,7 +31,6 @@ Some plugins are not interesting on their own, but are included to satisfy depen
 * CountJump: ConflictMotions
 * ingo-library: ConflictDetection, ConflictMotions
 * repeat: various (typically optional)
-* vimproc: unite, vinarise
 * xolox-misc: notes
 
 Workarounds
