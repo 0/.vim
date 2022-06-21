@@ -172,6 +172,10 @@ map <leader>dou :diffupdate<CR>
 let g:extradite_showhash = 1
 " }}}
 
+" matchit {{{
+packadd! matchit
+" }}}
+
 " nerdtree {{{
 nnoremap <silent> <leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <leader>N :NERDTreeClose <bar> :NERDTreeFind<CR>
