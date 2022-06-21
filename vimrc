@@ -190,7 +190,7 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#tab_min_count = 2
 " }}}
 
-" ConflictMotions
+" ConflictMotions {{{
 let g:ConflictMotions_MarkerMapping = ''
 " }}}
 
