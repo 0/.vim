@@ -10,6 +10,10 @@
 	path = bundle/Align
 	url = https://github.com/vim-scripts/Align.git
 	ignore = untracked
+[submodule "bundle/beancount"]
+	path = bundle/beancount
+	url = https://github.com/nathangrigg/vim-beancount.git
+	ignore = untracked
 [submodule "bundle/ConflictDetection"]
 	path = bundle/ConflictDetection
 	url = https://github.com/inkarkat/vim-ConflictDetection.git
@@ -42,6 +46,14 @@
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 	ignore = untracked
+[submodule "bundle/indent-object"]
+	path = bundle/indent-object
+	url = https://github.com/michaeljsmith/vim-indent-object.git
+	ignore = untracked
+[submodule "bundle/indentwise"]
+	path = bundle/indentwise
+	url = https://github.com/jeetsukumaran/vim-indentwise.git
+	ignore = untracked
 [submodule "bundle/ingo-library"]
 	path = bundle/ingo-library
 	url = https://github.com/inkarkat/vim-ingo-library.git
@@ -66,6 +78,10 @@
 	path = bundle/notes
 	url = https://github.com/xolox/vim-notes.git
 	ignore = untracked
+[submodule "bundle/notmuch-address"]
+	path = bundle/notmuch-address
+	url = https://github.com/adborden/vim-notmuch-address.git
+	ignore = untracked
 [submodule "bundle/NrrwRgn"]
 	path = bundle/NrrwRgn
 	url = https://github.com/chrisbra/NrrwRgn.git
@@ -81,6 +97,10 @@
 [submodule "bundle/repeat"]
 	path = bundle/repeat
 	url = https://github.com/tpope/vim-repeat.git
+	ignore = untracked
+[submodule "bundle/schlepp"]
+	path = bundle/schlepp
+	url = https://github.com/zirrostig/vim-schlepp.git
 	ignore = untracked
 [submodule "bundle/signature"]
 	path = bundle/signature
@@ -113,6 +133,14 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+	ignore = untracked
+[submodule "bundle/undotree"]
+	path = bundle/undotree
+	url = https://github.com/mbbill/undotree.git
+	ignore = untracked
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
 	ignore = untracked
 [submodule "bundle/xolox-misc"]
 	path = bundle/xolox-misc

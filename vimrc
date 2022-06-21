@@ -190,6 +190,12 @@ let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#tab_min_count = 2
 " }}}
 
+" beancount {{{
+let g:beancount_separator_col = 70
+autocmd FileType beancount setlocal expandtab tabstop=2 shiftwidth=2
+autocmd FileType beancount noremap <leader>. :AlignCommodity<CR>
+" }}}
+
 " ConflictMotions {{{
 let g:ConflictMotions_MarkerMapping = ''
 " }}}
@@ -245,6 +251,16 @@ let g:notes_smart_quotes = 0
 let g:nrrw_rgn_protect = 'n'
 " }}}
 
+" schlepp {{{
+vmap <unique> <C-k> <Plug>SchleppUp
+vmap <unique> <C-j> <Plug>SchleppDown
+vmap <unique> <C-h> <Plug>SchleppLeft
+vmap <unique> <C-l> <Plug>SchleppRight
+
+let g:Schlepp#allowSquishingLines = 1
+let g:Schlepp#allowSquishingBlock = 1
+" }}}
+
 " slime {{{
 let g:slime_python_ipython = 1
 " }}}
@@ -252,5 +268,9 @@ let g:slime_python_ipython = 1
 " ultisnips {{{
 let g:UltiSnipsNoPythonWarning = 1
 let g:UltiSnipsSnippetDirectories = ["UltiSnips", "ulti_snippets"]
+" }}}
+
+" undotree {{{
+nnoremap <leader>u :UndotreeToggle<cr>
 " }}}
 " }}}
