@@ -14,10 +14,15 @@ set tabstop=4                     " A 4-space tab seems reasonable
 set shiftwidth=4
 set copyindent                    " Keep existing indentation
 set preserveindent
+set viminfo=                      " Don't use viminfo
+set nobackup                      " Don't keep the backup file
+set noswapfile                    " Don't make a swap file
+set noundofile                    " Don't record persistent undo
 set hlsearch                      " Highlight search results
 set incsearch                     " Search as you type
 set ignorecase                    " Ignore case when searching
 set smartcase                     " But not always
+set ttimeoutlen=100               " Don't wait for escape sequences
 set nojoinspaces                  " Never insert two spaces
 set cursorline                    " Highlight the current line
 set virtualedit=block             " Allow block selection to go anywhere
@@ -31,8 +36,6 @@ set background=dark               " Light-on-dark
 set title                         " Set the terminal title
 if has("gui_macvim")
 	set guifont=Menlo\ Regular:h12
-else
-	set guifont=Fixed\ 11
 endif
 if has("gui_running")
 	set showtabline=2             " Always show the tab bar
@@ -40,9 +43,15 @@ if has("gui_running")
 elseif has("mouse")
 	set mouse=a                   " Enable mouse use in terminal
 endif
+set guioptions-=a                 " Don't clobber selection
+set guioptions-=P
+set guioptions-=A
+set clipboard-=autoselect
+set clipboard-=autoselectplus
+set clipboard-=autoselectml
 set number                        " Show line numbers
 if exists('+colorcolumn')
-	set colorcolumn=80            " Hilight the 80th column
+	set colorcolumn=+1            " Highlight column to the right of textwidth
 endif
 set foldmethod=marker             " Fold on markers
 set foldcolumn=1                  " Show folds
@@ -51,14 +60,9 @@ set list                          " Show whitespace
 set listchars=tab:»·,trail:·,nbsp:%
 set display=uhex                  " Show nonprintables as <xx>
 set pastetoggle=<F2>              " Toggle :set paste/nopaste
-if has("persistent_undo")
-	set undodir=~/.vim/undodir//
-	set undofile
-	set undolevels=1000
-	set undoreload=10000
-endif
 set spelllang=en_ca               " Canadian English
 set tags+=tags;                   " Search parents for tags
+set nrformats-=octal
 " }}}
 
 " Key mappings {{{
@@ -66,9 +70,6 @@ let mapleader = ","
 
 noremap  <F1> <ESC>
 inoremap <F1> <ESC>
-
-" Toggle spell checking.
-nnoremap <silent> <leader>sp :set spell!<CR>
 
 " Clear highlighting
 nnoremap <silent> <c-h> :nohl<CR>:redraw<CR>
@@ -89,10 +90,6 @@ command! -bang QALL qall<bang>
 map K <nop>
 map Q <nop>
 
-" Unfold and center search results.
-noremap N Nzvzz
-noremap n nzvzz
-
 noremap <C-n> :silent cnext<CR>
 noremap <C-p> :silent cprevious<CR>
 
@@ -108,8 +105,8 @@ augroup vimrc
 	" Clear out existing autocommands, in case this file is re-sourced.
 	autocmd!
 
-	" Spaces are good for indentation sometimes
-	autocmd FileType haskell,lisp,markdown,pyrex,python,racket setlocal expandtab
+	" Spaces are acceptable for indentation sometimes.
+	autocmd FileType haskell,julia,lisp,markdown,pyrex,python,racket setlocal expandtab
 
 	" .hsc files are Haskell. Elm files are Haskellesque.
 	autocmd BufNewFile,BufRead *.hsc,*.elm set ft=haskell
@@ -119,9 +116,6 @@ augroup vimrc
 
 	" PHP test files are mostly PHP.
 	autocmd BufNewFile,BufRead *.phpt set ft=php
-
-	" Go back to the last position when opening a file
-	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"zvzz" | endif
 augroup END
 " }}}
 
@@ -232,6 +226,10 @@ let NERDTreeIgnore += ['\.class$']
 let NERDTreeQuitOnOpen = 1
 " }}}
 
+" netrw {{{
+let g:netrw_dirhistmax = 0
+" }}}
+
 " neverland {{{
 colorscheme neverland-darker
 " }}}
@@ -263,6 +261,7 @@ let g:Schlepp#allowSquishingBlock = 1
 
 " slime {{{
 let g:slime_python_ipython = 1
+let g:slime_target = "tmux"
 " }}}
 
 " ultisnips {{{
