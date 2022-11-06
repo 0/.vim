@@ -136,24 +136,56 @@ match Error '\s\+$'
 
 " Plugin settings {{{
 " airline {{{
+let g:airline_theme_patch_func = 'AirlineThemePatch'
+
+function! AirlineThemePatch(palette)
+  for colors in values(a:palette.inactive)
+    let colors[0] = '#ffffff'
+    let colors[1] = '#121212'
+    let colors[2] = 255
+    let colors[3] = 233
+  endfor
+  let a:palette.inactive_modified['airline_c'][0] = '#ff00af'
+  let a:palette.inactive_modified['airline_c'][1] = ''
+  let a:palette.inactive_modified['airline_c'][2] = 199
+  let a:palette.inactive_modified['airline_c'][3] = ''
+endfunction
+
+let g:airline_symbols_ascii = 1
+
 " Use the short mode labels given in the documentation.
 let g:airline_mode_map = {
-			\ '__' : '-',
-			\ 'n'  : 'N',
-			\ 'i'  : 'I',
-			\ 'R'  : 'R',
-			\ 'c'  : 'C',
-			\ 'v'  : 'V',
-			\ 'V'  : 'V',
-			\ '' : 'V',
-			\ 's'  : 'S',
-			\ 'S'  : 'S',
-			\ '' : 'S',
+			\ '__'     : '-',
+			\ 'c'      : 'C',
+			\ 'i'      : 'I',
+			\ 'ic'     : 'I',
+			\ 'ix'     : 'I',
+			\ 'n'      : 'N',
+			\ 'multi'  : 'M',
+			\ 'ni'     : 'N',
+			\ 'no'     : 'N',
+			\ 'R'      : 'R',
+			\ 'Rv'     : 'R',
+			\ 's'      : 'S',
+			\ 'S'      : 'S',
+			\ ''     : 'S',
+			\ 't'      : 'T',
+			\ 'v'      : 'V',
+			\ 'V'      : 'V',
+			\ ''     : 'V',
 			\ }
+
+" Hide most common case.
+let g:airline#parts#ffenc#skip_expected_string='utf-8[unix]'
+
+" Disable searchcount.
+let g:airline#extensions#searchcount#enabled = 0
 
 " Use the airline tabline.
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_splits = 0
 let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#show_tab_count = 0
 let g:airline#extensions#tabline#show_tab_type = 0
 let g:airline#extensions#tabline#tab_min_count = 2
 " }}}
@@ -170,6 +202,10 @@ map <leader>dou :diffupdate<CR>
 
 " extradite {{{
 let g:extradite_showhash = 1
+" }}}
+
+" file-line {{{
+let g:file_line_crosshairs = 0
 " }}}
 
 " matchit {{{
